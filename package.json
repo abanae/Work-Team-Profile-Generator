@@ -1,0 +1,27 @@
+{
+  "name": "Homewrork_10",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abanae/Work-Team-Profile-Generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abanae/Work-Team-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/abanae/Work-Team-Profile-Generator#readme",
+  "dependencies": {
+    "jest": "^27.0.5"
+  }
+}
