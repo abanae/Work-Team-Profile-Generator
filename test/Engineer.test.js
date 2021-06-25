@@ -7,9 +7,13 @@ test ("Checking for Github user", () => {
     expect(employee.gitHub).toBe(gitHub)
 })
 
+test("GetRole should return Engineer", () => {
+    const returnEnginer = "Engineer";
+    const employee = new Engineer("Eric", 12, "aabd@gmail.com","abanae")
+    expect(employee.getRole()).toBe(returnEnginer)
+})
 
-
-
+// test("Should ")
 
 
 
