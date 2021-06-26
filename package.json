@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/abanae/Work-Team-Profile-Generator#readme",
   "dependencies": {
+    "inquirer": "^8.1.1",
     "jest": "^27.0.5"
   }
 }
