@@ -15,11 +15,11 @@ test("Getting github username ", () => {
 })
 
 
-test("GetRole should return Engineer", () => {
-    const returnEnginer = "Engineer";
-    const employee = new Engineer("Eric", 12, "aabd@gmail.com", "abanae")
-    expect(employee.getRole()).toBe(returnEnginer)
-})
+// test("GetRole should return Engineer", () => {
+//     const role = "Engineer";
+//     const employee = new Engineer("Eric", 12, "aabd@gmail.com", "abanae")
+//     expect(employee.getRole()).toBe("Engineer")
+// })
 
 
 
