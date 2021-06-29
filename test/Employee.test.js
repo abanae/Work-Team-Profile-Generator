@@ -2,7 +2,7 @@ const Employee = require("../lib/Employee")
 
 
 test("Check to see if it returns an object", () => {
-    const employee = new Employee()
+const employee = new Employee()
     expect(typeof (employee)).toBe("object");
 
 })

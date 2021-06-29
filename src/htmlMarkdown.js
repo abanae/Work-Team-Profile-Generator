@@ -1,4 +1,4 @@
-const Employee = require("./lib/Employee");
+
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
@@ -19,7 +19,7 @@ const questions = {
             validate: (value) => {
                 if (value) {
                     return true
-                } else { return "Please enter Manager's name."}
+                } else { return "Please enter Manager's name." }
             },
         },
         {
@@ -167,4 +167,87 @@ const selectTeamMember = [
         choices: ["Manager", "Engineer", "Intern"],
     }
 ];
+
+function addTeamMember() {
+    inquirer.prompt(selectTeamMember)
+        .then(answer => {
+            if (answer.teamMembers === "Manager") {
+                if (addManager) {
+                    inquirer.prompt(questions.Manager)
+                        .then(answer => {
+                            const manager = new Manager
+                                (
+                                    answer.name,
+                                    answer.id,
+                                    answer.email,
+                                    answer.officeNumber
+                                );
+
+                            teamMembers.push(manager);
+                            addManager = false;
+                            if (answer.addNew === "yes") {
+                                addTeamMember();
+                            } else {
+                                generate();
+                            };
+
+                        });
+                } else {
+                    console.log("There is an existing Manager")
+                    addTeamMember();
+                }
+            } else if (answer.teamMembers === "Engineer") {
+                inquirer.prompt(questions.Engineer)
+                    .then(answer => {
+                        const engineer = new Engineer
+                            (
+                                answer.name,
+                                answer.id,
+                                answer.email,
+                                answer.github
+                            );
+
+                        teamMembers.push(engineer);
+                        if (answer.addNew === "yes") {
+                            addTeamMember();
+                        } else {
+                            generate();
+                        };
+                    });
+            } else if (answer.teamMembers === "Intern") {
+                inquirer.prompt(questions.Intern)
+                    .then(answer => {
+                        const intern = new intern
+                            (
+                                answer.name,
+                                answer.id,
+                                answer.email,
+                                answer.school
+                            );
+
+                        teamMembers.push(intern);
+                        if (answer.addNew === "yes") {
+                            addTeamMember();
+                        } else {
+                            generate();
+                        };
+                    });
+            };
+        });
+    };
+    addTeamMember();
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 
