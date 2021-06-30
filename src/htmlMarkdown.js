@@ -1,11 +1,12 @@
 
-const Manager = require("./lib/Manager");
-const Engineer = require("./lib/Engineer");
-const Intern = require("./lib/Intern");
+const Manager = require("../lib/Manager");
+const Engineer = require("../lib/Engineer");
+const Intern = require("../lib/Intern");
 const inquirer = require("inquirer");
 const fs = require("fs");
-const { validateEntries, validateNumbers, validateEmail } = require('./lib/Validate');
-const validate = require("./lib/Validate");
+const { validateEntries, validateNumbers, validateEmail } = require('../lib/Validate');
+const validate = require("../lib/Validate");
+const htmlTemplate = require("./html")
 
 const teamMembers = [];
 let addManager = true;
@@ -37,7 +38,7 @@ const questions = {
             name: "email",
             message: "What is the Manager's email address?",
             validate: (value) => {
-                if (emailValidator.validate(value)) {
+                if (validateEmail(value)) {
                     return true
                 } else { return 'Please enter a valid email address.' }
             },
@@ -171,7 +172,7 @@ const selectTeamMember = [
 function addTeamMember() {
     inquirer.prompt(selectTeamMember)
         .then(answer => {
-            if (answer.teamMembers === "Manager") {
+            if (answer.teamMember === "Manager") {
                 if (addManager) {
                     inquirer.prompt(questions.Manager)
                         .then(answer => {
@@ -196,7 +197,7 @@ function addTeamMember() {
                     console.log("There is an existing Manager")
                     addTeamMember();
                 }
-            } else if (answer.teamMembers === "Engineer") {
+            } else if (answer.teamMember === "Engineer") {
                 inquirer.prompt(questions.Engineer)
                     .then(answer => {
                         const engineer = new Engineer
@@ -214,7 +215,7 @@ function addTeamMember() {
                             generate();
                         };
                     });
-            } else if (answer.teamMembers === "Intern") {
+            } else if (answer.teamMember === "Intern") {
                 inquirer.prompt(questions.Intern)
                     .then(answer => {
                         const intern = new intern
@@ -238,9 +239,9 @@ function addTeamMember() {
     addTeamMember();
 
 
-// function generate() {
-
-// }
+function generate() {
+    fs.writeFileSync("./dist/team.html", htmlTemplate(teamMembers));
+}
 
 
 
