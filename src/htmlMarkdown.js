@@ -87,7 +87,7 @@ const questions = {
             name: "email",
             message: "What is the Engineer's email address?",
             validate: (value) => {
-                if (emailValidator.validate(value)) {
+                if (validateEmail(value)) {
                     return true
                 } else { return 'Please enter a valid email address.' }
             },
@@ -136,7 +136,7 @@ const questions = {
             name: "email",
             message: "What is the Intern's email address?",
             validate: (value) => {
-                if (emailValidator.validate(value)) {
+                if (validateEmail(value)) {
                     return true
                 } else { return 'Please enter a valid email address.' }
             },
