@@ -2,7 +2,6 @@ h1 {
     Font-Family: 'Merriweather', Serif;
     font-size: 45px;
     letter-spacing: 5px;
-    text-transform: uppercase;
     font-weight: bolder;
 }
 
@@ -36,9 +35,6 @@ body {
     color: #000205;
 }
 
-/* a {
-    color: blue;
-} */
 
 a:hover {
     color:rgb(230, 141, 25);
