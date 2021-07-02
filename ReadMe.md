@@ -25,16 +25,16 @@
   
 
   ## Usage:
-It will prompt the user queations to help them build their team. Questions consist of a "Manager", "Engineer", & "intern" roles.
-The user is able to add as many team memebers as necessary.
+ It will prompt the user queations to help them build their team. Questions consist of a "Manager", "Engineer", & "Intern" roles.
+ The user is able to add as many team memebers as necessary.
   
 
   ## Testing:
   - Open Terminal
   - Run this command on your terminal: npm run test
-  - After you pass all test, run this command on your terminal: node (name of file your running your questions).js
+  - After you pass all test, run this command on your terminal: node (name of file you're running your questions).js
   - Follow prompts in the terminal 
-  - Click your html file & open it in your default browser
+  - Click on your html file & open it in your default browser
   
 
   ## Demo Video
