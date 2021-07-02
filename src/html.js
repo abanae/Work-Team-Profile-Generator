@@ -1,15 +1,15 @@
 const renderManager = (manager) => {
     return `<div class="card employee-card mr-4 ml-4 mb-3">
     <div class="card-header text-center">
-        <h2 class="card-title">${manager[0].name}</h2>
-        <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>${manager[0].role}</h3>
+        <h2 class="card-title">${manager.name}</h2>
+        <h3 class="card-title"><i class="fas fa-mug-hot mr-2"></i>${manager.role}</h3>
     </div>
     <div class="card-body">
         <ul class="list-group">
-            <li class="list-group-item">id:${manager[0].id}</li>
-            <li class="list-group-item">Email: <a href="mailto:${manager[0].email}">${manager[0].email}</a>
+            <li class="list-group-item">ID: ${manager.id}</li>
+            <li class="list-group-item">Email: <a href="mailto:${manager.email}">${manager.email}</a>
             </li>
-            <li class="list-group-item">Office number:${manager[0].officeNum}</li>
+            <li class="list-group-item">Office Number:${manager.officeNum}</li>
         </ul>
     </div>
 </div>`
@@ -19,33 +19,33 @@ const renderManager = (manager) => {
 const renderEngineer = (engineer) => {
     return `<div class="card employee-card mr-4 ml-4 mb-3">
     <div class="card-header text-center">
-        <h2 class="card-title">${engineer[1].name}</h2>
-        <h3 class="card-title"><i class="fas fa-glasses mr-2">${engineer[1].role}</i></h3>
+        <h2 class="card-title">${engineer.name}</h2>
+        <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>${engineer.role}</h3>
     </div>
     <div class="card-body">
         <ul class="list-group">
-            <li class="list-group-item">ID: ${engineer[1].id}</li>
-            <li class="list-group-item">Email: <a href="mailto:${engineer[1].email}">${engineer[1].email}</a>
+            <li class="list-group-item">ID: ${engineer.id}</li>
+            <li class="list-group-item">Email: <a href="mailto:${engineer.email}">${engineer.email}</a>
             </li>
-            <li class="list-group-item">GitHub: <a href="https://github.com/${engineer[1].gitHub}" target="_blank"
-            rel="noopener noreferrer">${engineer[1].gitHub}</a></li>
+            <li class="list-group-item">GitHub: <a href="https://github.com/${engineer.gitHub}" target="_blank"
+            rel="noopener noreferrer">${engineer.gitHub}</a></li>
         </ul>
     </div>
 </div>`
 }
 
 const renderIntern = (intern) => {
-    return`<div class="card employee-card mr-4 ml-4 mb-3">
+    return `<div class="card employee-card mr-4 ml-4 mb-3">
     <div class="card-header text-center">
-        <h2 class="card-title">${intern[2].name}</h2>
-        <h3 class="card-title"><i class="fas fa-user-graduate mr-2">${intern[2].role}</i></h3>
+        <h2 class="card-title">${intern.name}</h2>
+        <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>${intern.role}</h3>
     </div>
     <div class="card-body">
         <ul class="list-group">
-            <li class="list-group-item">ID:${intern[2].id} </li>
-            <li class="list-group-item">Email: <a href="mailto:${intern[2].email}">${intern[2].name}</a>
+            <li class="list-group-item">ID: ${intern.id} </li>
+            <li class="list-group-item">Email: <a href="mailto:${intern.email}">${intern.name}</a>
             </li>
-            <li class="list-group-item">School: ${intern[2].school}</li>
+            <li class="list-group-item">School: ${intern.school}</li>
         </ul>
     </div>
 </div>`
@@ -53,6 +53,7 @@ const renderIntern = (intern) => {
 
 
 const htmlTemplate = (data) => {
+    console.log(data);
     return `<!DOCTYPE html>
     <html lang="en">
     
@@ -80,14 +81,26 @@ const htmlTemplate = (data) => {
         <div class="container">
             <div class="row">
                 <div class="team-area col-12 d-flex justify-content-center mt-5">
-                    ${renderManager(data)}
-                
-                </div>
-            </div>
-        </div>
-    </body>
+                    ${data.filter(emp => emp.getRole() === "Manager")
+            .map(emp => renderManager(emp))
+            .join("")
+        }
+
+                    ${data.filter(emp => emp.getRole() === "Engineer")
+            .map(emp => renderEngineer(emp))
+            .join("")
+        }
+
+                    ${data.filter(emp => emp.getRole() === "Intern")
+            .map(emp => renderIntern(emp))
+            .join("")
+        }
+                </div >
+            </div >
+        </div >
+    </body >
     
-    </html>`
+    </html > `
 }
 
 module.exports = htmlTemplate;
@@ -96,5 +109,3 @@ module.exports = htmlTemplate;
 
 
 
-// ${renderEngineer(data)}
-//${renderrenderIntern(data)}

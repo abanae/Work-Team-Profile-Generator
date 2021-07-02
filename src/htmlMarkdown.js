@@ -94,7 +94,7 @@ const questions = {
         },
         {
             type: "input",
-            name: "github",
+            name: "gitHub",
             message: "What is the Engineer's GitHub username?",
             validate: (value) => {
                 if (value) {
@@ -181,7 +181,7 @@ function addTeamMember() {
                                     answer.name,
                                     answer.id,
                                     answer.email,
-                                    answer.officeNumber
+                                    answer.officeNum
                                 );
 
                             teamMembers.push(manager);
@@ -205,7 +205,7 @@ function addTeamMember() {
                                 answer.name,
                                 answer.id,
                                 answer.email,
-                                answer.github
+                                answer.gitHub
                             );
 
                         teamMembers.push(engineer);
@@ -218,7 +218,7 @@ function addTeamMember() {
             } else if (answer.teamMember === "Intern") {
                 inquirer.prompt(questions.Intern)
                     .then(answer => {
-                        const intern = new intern
+                        const intern = new Intern
                             (
                                 answer.name,
                                 answer.id,

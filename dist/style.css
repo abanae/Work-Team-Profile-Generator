@@ -43,7 +43,7 @@ a {
 a:hover {
     color: #D9B991;
     text-decoration: none;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 
