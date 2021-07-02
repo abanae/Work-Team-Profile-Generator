@@ -33,18 +33,24 @@ body {
 }
 
 .card-body {
-    color: #525659;
+    color: #000205;
 }
 
-a {
-    color: red;
-}
+/* a {
+    color: blue;
+} */
 
 a:hover {
-    color: #D9B991;
-    text-decoration: none;
+    color:rgb(230, 141, 25);
+    text-decoration:underline;
     text-transform: capitalize;
 }
 
-
+p{
+    margin-top: 50px;
+    margin-bottom: -50px;
+    text-align: center;
+    color:black;
+    font-weight: bold;
+}
 
