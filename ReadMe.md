@@ -12,6 +12,7 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Tests](#testing)
+- [Final Product](#final-product)
 - [Questions](#additional-info)
 
 
@@ -36,10 +37,10 @@
   - Click on your html file & open it in your default browser
   ![Running Test](./dist/images/testpass.PNG) 
 
-  ## Demo Video
-   ![Sample HTML](./dist/images/sampleHTML.PNG) 
+  ## Final Product:
+   ![Sample HTML](./dist/images/HTML.Sample.PNG) 
   * Tutorial Video (Jest) [here](https://drive.google.com/file/d/1WEXhgjFK8QCKn3IVQzAgxF467vZObyqa/view) 
-  * Tutorial Video (Inquirer) [here](https://drive.google.com/file/d/1Jawx6EsjYnZad1TErZG0GbXnD_9AnmtQ/view)
+  * Tutorial Video (Inquirer) [here](https://drive.google.com/file/d/1FqGJGBbTgb2BX6WA6kED4PcT1NeH2Sn_/view)
   
   ## Additional Info:
   :octocat: [Ana Abad](https://github.com/abanae)

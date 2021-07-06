@@ -80,7 +80,7 @@ const htmlTemplate = (data) => {
         </div>
         <div class="container">
             <div class="row">
-                <div class="team-area d-flex justify-content-center mt-5">
+                <div class="team-area col-12 d-flex justify-content-center mt-5">
                     ${data.filter(emp => emp.getRole() === "Manager")
             .map(emp => renderManager(emp))
             .join("")
