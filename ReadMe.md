@@ -37,7 +37,7 @@
   ![Running Test](./dist/images/testpass.PNG) 
 
   ## Demo Video
-  * ![Sample HTML](./dist/images/sampleHTML.PNG) 
+   ![Sample HTML](./dist/images/sampleHTML.PNG) 
   * Tutorial Video (Jest) [here](https://drive.google.com/file/d/1WEXhgjFK8QCKn3IVQzAgxF467vZObyqa/view) 
   * Tutorial Video (Inquirer) [here](https://drive.google.com/file/d/1Jawx6EsjYnZad1TErZG0GbXnD_9AnmtQ/view)
   
