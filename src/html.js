@@ -20,7 +20,7 @@ const renderEngineer = (engineer) => {
     return `<div class="card employee-card mr-4 ml-4 mb-3">
     <div class="card-header text-center">
         <h2 class="card-title">${engineer.name}</h2>
-        <h3 class="card-title"><i class="fas fa-glasses mr-2"></i>${engineer.role}</h3>
+        <h3 class="card-title"><i class="fas fa-wrench mr-2"></i>${engineer.role}</h3>
     </div>
     <div class="card-body">
         <ul class="list-group">
@@ -38,7 +38,7 @@ const renderIntern = (intern) => {
     return `<div class="card employee-card mr-4 ml-4 mb-3">
     <div class="card-header text-center">
         <h2 class="card-title">${intern.name}</h2>
-        <h3 class="card-title"><i class="fas fa-user-graduate mr-2"></i>${intern.role}</h3>
+        <h3 class="card-title"><i class="fas fa-id-badge mr-2"></i>${intern.role}</h3>
     </div>
     <div class="card-body">
         <ul class="list-group">
@@ -80,7 +80,7 @@ const htmlTemplate = (data) => {
         </div>
         <div class="container">
             <div class="row">
-                <div class="team-area col-12 d-flex justify-content-center mt-5">
+                <div class="team-area d-flex justify-content-center mt-5">
                     ${data.filter(emp => emp.getRole() === "Manager")
             .map(emp => renderManager(emp))
             .join("")
@@ -98,6 +98,10 @@ const htmlTemplate = (data) => {
                 </div >
             </div >
         </div >
+        <footer>
+        <p>Created By <a href="https://github.com/abanae">Ana Abad</a></p>
+        <p>Copyright © 2021 Work Team Profile.All Rights Reserved</p>
+    </footer>
     </body >
     
     </html > `

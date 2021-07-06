@@ -41,7 +41,7 @@
   * Tutorial Video (Jest) [here](https://drive.google.com/file/d/1WEXhgjFK8QCKn3IVQzAgxF467vZObyqa/view) 
   * Tutorial Video (Inquirer) [here](https://drive.google.com/file/d/1Jawx6EsjYnZad1TErZG0GbXnD_9AnmtQ/view)
   
-  ## Additional Info(Contact Me):
+  ## Additional Info:
   :octocat: [Ana Abad](https://github.com/abanae)
   - Email: https://github.com/abanae 
   
