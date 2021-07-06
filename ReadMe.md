@@ -37,7 +37,7 @@
   ![Running Test](./dist/images/testpass.PNG) 
 
   ## Demo Video
-  See video [here]() Coming Soon
+  Tutorial Video (Jest) [here](https://drive.google.com/file/d/1WEXhgjFK8QCKn3IVQzAgxF467vZObyqa/view) 
   
   
   ## Additional Info(Contact Me):
